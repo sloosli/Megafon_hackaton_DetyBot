@@ -13,9 +13,9 @@ def change_description(body, chat_id, user_id):
 
     body = body.split()
     
-    checker = lambda x, i, j: x[i:j] if len(x)-1 >= i else None 
+    checker = lambda x, i: x[i] if len(x)-1 >= i else None 
 
-    task = checker(body,i, i+1)
+    task = checker(body, 1)
 
     if len(body) > 2:
         body = ' '.join(body[2:])
