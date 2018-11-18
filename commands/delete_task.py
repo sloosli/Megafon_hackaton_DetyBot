@@ -14,7 +14,7 @@ def delete_task(body, chat_id, user_id):
     
     body = body.split()
 
-    if not body[1]:
+    if len(body) < 2:
         return 'Неверный ввод'
 
     if body[1] == 'all':
